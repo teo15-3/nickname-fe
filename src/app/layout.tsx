@@ -1,5 +1,10 @@
+"use client";
+
 import "../styles/globals.scss";
 import "../styles/reset.scss";
+
+import Script from "next/script";
+import { kakaoInit } from "../service/kakao";
 
 export const metadata = {
   title: "유니크하면서 모던하고 대중적이지만 시크하고 유러스한 닉네임 지어줘",
@@ -14,6 +19,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+      <Script
+        src="https://developers.kakao.com/sdk/js/kakao.js"
+        onLoad={() => kakaoInit()}
+      />
       <body>{children}</body>
     </html>
   );
