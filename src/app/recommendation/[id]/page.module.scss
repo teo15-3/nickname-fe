@@ -1,0 +1,102 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
+
+.main {
+  font-family: "Pretendard";
+}
+
+.pageLayout {
+  min-height: 1024px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex-grow: 0.2;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: 900;
+  line-height: 130%;
+
+  margin-top: 80px;
+  margin-bottom: 12px;
+  margin-left: 20px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 16px;
+}
+
+.tag {
+  margin: 5px 4px;
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding: 6px 14px;
+}
+
+.sendSection {
+  text-align: center;
+}
+
+.inputWrap {
+  position: relative;
+  margin: 0 20px;
+}
+
+.inputClearBtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #afafaf;
+  color: white;
+  font-size: 12px;
+  border-radius: 10px;
+}
+
+.input {
+  width: 100%;
+  height: 56px;
+  box-sizing: border-box;
+  padding: 0 50px 0 16px;
+  border-radius: 10px;
+  background: #f1f1f1;
+
+  border: none;
+  outline: none;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.input::placeholder {
+  color: #afafaf;
+}
+
+.input:focus {
+  background: #dfe2ff;
+  color: #1400f5;
+}
+
+.sendButton {
+  width: 120px;
+  height: 56px;
+  background: #afafaf;
+  color: white;
+
+  margin-top: 13px;
+  padding: 17px 20px;
+
+  border-radius: 50px;
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+  font-weight: 600;
+}
