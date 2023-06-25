@@ -29,14 +29,16 @@ export default function Home() {
             닉네임 지어줘
           </h1>
         </header>
-        <section>
-          <Image
-            src="/assets/img/intro/img_jamini.png"
-            alt="잼민이"
-            width="350"
-            height="356"
-            className={styles.jaminiImg}
-          />
+        <section className={styles.section}>
+          <div className={styles.ImgWrapper}>
+            <Image
+              src="/assets/img/intro/img_jamini.png"
+              alt="잼민이"
+              width="300"
+              height="306"
+              className={styles.jaminiImg}
+            />
+          </div>
           <div className={styles.footer}>
             <div className={styles.description}>
               지금까지 <b className={styles.highlightText}>{getUserCount()}</b>
@@ -46,7 +48,7 @@ export default function Home() {
             </div>
             <Link href="/creation">
               <Image
-                src="/assets/img/intro/bt_primary.svg"
+                src="/assets/img/intro/bt_primary_start.svg"
                 alt="닉네임 지어줘"
                 width="167"
                 height="56"

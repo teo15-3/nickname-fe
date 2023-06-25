@@ -3,22 +3,18 @@
 .main {
   background: #ffee00;
   font-family: "Pretendard";
-  height: 100vh;
+  height: 100dvh;
 
+  overflow: hidden;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: "Pretendard";
-
-  position: relative;
+  justify-content: center;
 }
 
 .introPageLayout {
   width: 100%;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .title {
@@ -34,19 +30,19 @@
   color: #1400f5;
 }
 
-.jaminiImg {
-  position: absolute;
-  right: 0;
-  bottom: 200px;
+.section {
+  margin-top: 76px;
+}
+
+.ImgWrapper {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .footer {
   text-align: center;
-
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 64px;
+  margin-top: 24px;
+  margin-bottom: 64px;
 
   .description {
     font-size: 12px;
