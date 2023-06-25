@@ -51,7 +51,7 @@ export default function Home() {
                 src="/assets/img/intro/bt_primary_start.svg"
                 alt="닉네임 지어줘"
                 width="167"
-                height="56"
+                height="55"
                 className={styles.linkButton}
               />
             </Link>

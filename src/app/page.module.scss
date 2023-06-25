@@ -3,9 +3,9 @@
 .main {
   background: #ffee00;
   font-family: "Pretendard";
-  height: 100dvh;
+  min-height: 100vh;
+  height: 100%;
 
-  overflow: hidden;
   max-width: 500px;
   display: flex;
   flex-direction: column;
@@ -18,12 +18,12 @@
 }
 
 .title {
-  font-size: 34px;
+  font-size: 2rem;
   font-weight: 900;
   line-height: 130%;
 
-  margin-top: 42px;
-  margin-left: 20px;
+  // margin-top: 2.625rem;
+  margin-left: 1.25rem;
 }
 
 .highlightText {
@@ -31,7 +31,7 @@
 }
 
 .section {
-  margin-top: 76px;
+  margin-top: 3.125rem;
 }
 
 .ImgWrapper {
@@ -41,7 +41,7 @@
 
 .footer {
   text-align: center;
-  margin-top: 24px;
+  margin-top: 1.5rem;
   margin-bottom: 64px;
 
   .description {
