@@ -19,7 +19,7 @@ export default function Home() {
           </h1>
         </header>
         <section>
-          <div className={styles.imgWrapper}>
+          <div className={styles.imgWrapper} style={{ margin: "30px" }}>
             <Image
               src="/assets/img/img_jamini.png"
               alt="잼민이"
