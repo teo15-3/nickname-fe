@@ -11,14 +11,15 @@
 }
 
 .textWrapper {
-  width: 100%;
-  height: 50px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
   @include center();
-  background-color: #8b8b8b;
   color: white;
-  border-radius: 4px;
   opacity: 0;
   transition: all 0.2s;
+  z-index: 3;
 }
 
 .show {
