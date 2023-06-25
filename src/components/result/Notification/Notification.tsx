@@ -11,13 +11,18 @@ const Notification = () => {
 
   useEffect(() => {
     setisOpen(true);
+    const showTimer = setTimeout(() => {
+      setisOpen(false);
+    }, 1900);
 
-    return () => setisOpen(false);
+    return () => clearTimeout(showTimer);
   }, []);
 
   return (
     <section className={style.notification}>
-      <div className={`${style.textWrapper} ${isOpen ? style.show : ""} }`}>
+      <div
+        className={`${style.textWrapper} ${isOpen ? style.show : style.hide} }`}
+      >
         <Image
           width={338}
           height={42}
