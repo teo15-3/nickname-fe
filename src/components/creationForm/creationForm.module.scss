@@ -36,6 +36,11 @@
   margin-bottom: 48px;
 }
 
+.titleInput::placeholder {
+  color: #afafaf;
+  font-size: 14px;
+}
+
 .center {
   display: flex;
   justify-content: center;
@@ -63,6 +68,10 @@
   margin-bottom: 48px;
 }
 
+.select::placeholder {
+  font-size: 14px;
+}
+
 .tagDesc {
   font-size: 12px;
   font-family: Pretendard;
@@ -86,6 +95,12 @@
   background: var(--grey-10, #f1f1f1);
   border: none;
   margin-right: 8px;
+  text-align: center;
+}
+
+.tagInput::placeholder {
+  color: #afafaf;
+  font-size: 14px;
 }
 
 .tagButton {

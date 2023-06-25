@@ -138,7 +138,6 @@ export default function CreationForm() {
               placeholder="귀엽고 깜직한데 만만치 않은"
               value={title}
               onChange={handleTitleChange}
-              style={{ fontFamily: "Pretendard" }}
             />
           </div>
         </div>
@@ -171,12 +170,19 @@ export default function CreationForm() {
                     }
                   : {
                       fontFamily: "Pretendard",
-                      color: "#afafaf",
+                      color: "#AFAFAF",
                       fontSize: "14px",
                     }
               }
             >
-              <option value="" style={{ display: "none" }}>
+              <option
+                value=""
+                style={{
+                  fontFamily: "Pretendard",
+                  color: "#AFAFAF",
+                  fontSize: "14px",
+                }}
+              >
                 선택하세요
               </option>
               <option value="1">게임에서</option>
@@ -212,12 +218,6 @@ export default function CreationForm() {
               type="text"
               onKeyPress={handleTagInputKeyPress}
               onChange={handleTagValueChange}
-              style={{
-                fontFamily: "Pretendard",
-                fontSize: "14px",
-                color: "#AFAFAF",
-                textAlign: "center",
-              }}
               value={tagValue}
               placeholder={
                 hasTag()
