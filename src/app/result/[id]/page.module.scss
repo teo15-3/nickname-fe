@@ -17,7 +17,7 @@ $list-title-color: #1400f5;
 
 .wrapper {
   width: 375px;
-  background-color: $bg-color;
+  background-color: #ffffff;
   margin: 0 20px;
   margin-top: 80px;
   margin-bottom: 64px;
@@ -78,12 +78,20 @@ $list-title-color: #1400f5;
   cursor: pointer;
 }
 
+.soloBtn {
+  position: absolute;
+  bottom: 207px;
+}
+
 //일정이상 내려가면 absolute 풂으로 동적 마진 고정으로 변경
 
 @media screen and (max-height: 730px) {
   .share {
-    position: relative;
+    position: static;
     margin-top: 71px;
     margin-bottom: 64px;
+  }
+  .soloBtn {
+    position: static;
   }
 }

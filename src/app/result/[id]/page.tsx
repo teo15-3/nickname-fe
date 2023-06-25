@@ -123,18 +123,20 @@ export default function Create({ params }: Props) {
         )}
       </section>
 
-      <button
-        type="button"
-        onClick={handleClipBoardSelfBtn}
-        className={`${style.imgcontainer} ${style.shareBtn}`}
-      >
-        <Image
-          alt="shareResultSelf"
-          src={`${RESLUT_PAGE_CONSTANTS.DFAULT_IMG_PATH}bt_priamry_link copy.svg`}
-          width={224}
-          height={56}
-        />
-      </button>
+      <section className={style.soloBtn}>
+        <button
+          type="button"
+          onClick={handleClipBoardSelfBtn}
+          className={`${style.imgcontainer} ${style.shareBtn}`}
+        >
+          <Image
+            alt="shareResultSelf"
+            src={`${RESLUT_PAGE_CONSTANTS.DFAULT_IMG_PATH}bt_priamry_link copy.svg`}
+            width={224}
+            height={56}
+          />
+        </button>
+      </section>
 
       <section className={style.share}>
         <h4 className={style.shareTitle}>닉네임 짓기 요청하기</h4>
