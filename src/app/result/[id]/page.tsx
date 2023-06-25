@@ -46,7 +46,13 @@ export default function Create({ params }: Props) {
         method: "DELETE",
       },
     );
-    // 나머지 코드 작성
+
+    if (res.ok) {
+      setData((prev) => ({
+        ...prev,
+        nicknames: prev.nicknames.filter((nick) => nick !== nickname),
+      }));
+    }
   };
 
   useEffect(() => {
@@ -69,8 +75,6 @@ export default function Create({ params }: Props) {
     fetchResultData();
     fetchOtherKey();
   }, []);
-
-  console.log(otherKey);
 
   const { category, title, nicknames, tags } = data;
 
