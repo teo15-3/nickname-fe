@@ -31,6 +31,18 @@ const DEFAULT_DATA_RESULT_STATE: NicknameResultT = {
   nicknames: [],
 };
 
+function isIPhone() {
+  return /iPhone|iPod/.test(navigator.userAgent);
+}
+
+// 사용 예시
+if (isIPhone()) {
+  console.log("현재 접속한 기기는 아이폰입니다.");
+} else {
+  console.log("현재 접속한 기기는 아이폰이 아닙니다.");
+}
+
+console.log(test, "뭐라뜰까");
 // 아더키를 useState에 넣을필요가..?근데 당장 생각안나서 일단진행
 
 export default function Create({ params }: Props) {
