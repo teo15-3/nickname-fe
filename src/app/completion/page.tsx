@@ -9,7 +9,7 @@ export default function Completion() {
         <div className={styles.imgWrapper}>
           <Image
             className={styles.nametagImg}
-            src="/assets/img/img_nametag.png"
+            src="/assets/img/completion/img_nametag.png"
             alt="nametag"
             width="150"
             height="175"
@@ -29,7 +29,7 @@ export default function Completion() {
 
       <Link href="/creation">
         <Image
-          src="/assets/img/bt_request.svg"
+          src="/assets/img/completion/bt_request.svg"
           alt="나도 요청하기"
           width="224"
           height="56"

@@ -3,15 +3,19 @@
 .main {
   background: #ffee00;
   font-family: "Pretendard";
-  height: 812px;
+  height: 100vh;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   font-family: "Pretendard";
+
+  position: relative;
 }
 
 .introPageLayout {
+  width: 100%;
+
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -22,23 +26,27 @@
   font-weight: 900;
   line-height: 130%;
 
-  margin-left: 20px;
   margin-top: 42px;
+  margin-left: 20px;
 }
 
 .highlightText {
   color: #1400f5;
 }
 
-.imgWrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: row-reverse;
+.jaminiImg {
+  position: absolute;
+  right: 0;
+  bottom: 200px;
 }
 
 .footer {
   text-align: center;
-  margin-top: 48px;
+
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 64px;
 
   .description {
     font-size: 12px;
@@ -46,23 +54,8 @@
     line-height: 130%;
     color: #3a3a3a;
   }
-}
 
-.linkButton {
-  display: inline-flex;
-  padding: 16px 24px 16px 32px;
-  justify-content: center;
-  align-items: center;
-
-  border-radius: 51px;
-  background-color: #1400f5;
-  color: white;
-  margin-top: 16px;
-  margin-bottom: 48px;
-  border: none;
-  outline: none;
-
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 120%;
+  .linkButton {
+    margin-top: 8px;
+  }
 }

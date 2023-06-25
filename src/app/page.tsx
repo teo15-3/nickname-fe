@@ -30,14 +30,13 @@ export default function Home() {
           </h1>
         </header>
         <section>
-          <div className={styles.imgWrapper} style={{ margin: "30px" }}>
-            <Image
-              src="/assets/img/img_jamini.png"
-              alt="잼민이"
-              width="350"
-              height="356"
-            />
-          </div>
+          <Image
+            src="/assets/img/intro/img_jamini.png"
+            alt="잼민이"
+            width="350"
+            height="356"
+            className={styles.jaminiImg}
+          />
           <div className={styles.footer}>
             <div className={styles.description}>
               지금까지 <b className={styles.highlightText}>{getUserCount()}</b>
@@ -46,9 +45,13 @@ export default function Home() {
               닉네임을 얻어갔습니다.
             </div>
             <Link href="/creation">
-              <button type="button" className={styles.linkButton}>
-                닉네임 지어줘 &#9829;
-              </button>
+              <Image
+                src="/assets/img/intro/bt_primary.svg"
+                alt="닉네임 지어줘"
+                width="167"
+                height="56"
+                className={styles.linkButton}
+              />
             </Link>
           </div>
         </section>
