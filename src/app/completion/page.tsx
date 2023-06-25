@@ -27,7 +27,7 @@ export default function Completion() {
         </div>
       </section>
 
-      <Link href="/">
+      <Link href="/creation">
         <Image
           src="/assets/img/bt_request.svg"
           alt="나도 요청하기"
