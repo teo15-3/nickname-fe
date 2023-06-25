@@ -103,74 +103,78 @@ export default function Create({ params }: Props) {
   };
 
   return (
-    <main className={style.wrapper}>
-      <section className={style.titles}>
-        <h3 className={style.title}>{`${category} 사용할`}</h3>
-        <h3 className={style.title}>{`${title}`}</h3>
-        <h3 className={style.title}>닉네임목록</h3>
-      </section>
+    <div className={style.layoutContainer}>
+      <div className={style.wrapper}>
+        <section className={style.titles}>
+          <h3 className={style.title}>{`${category} 사용할`}</h3>
+          <h3 className={style.title}>{`${title}`}</h3>
+          <h3 className={style.title}>닉네임목록</h3>
+        </section>
 
-      <section className={style.tagSection}>
-        <Tags tags={tags} />
-      </section>
+        <section className={style.tagSection}>
+          <div>
+            <Tags tags={tags} />
+          </div>
+        </section>
 
-      <section className={style.listUpContainer}>
-        {nicknames.length !== 0 ? (
-          <Lists
-            handleDelete={handleDeleteBtn}
-            mykey={params.id}
-            lists={nicknames}
-          />
-        ) : (
-          <p />
-        )}
-      </section>
+        <section className={style.listUpContainer}>
+          {nicknames.length !== 0 ? (
+            <Lists
+              handleDelete={handleDeleteBtn}
+              mykey={params.id}
+              lists={nicknames}
+            />
+          ) : (
+            <p />
+          )}
+        </section>
 
-      <section className={style.soloBtn}>
-        <button
-          type="button"
-          onClick={handleClipBoardSelfBtn}
-          className={`${style.imgcontainer} ${style.shareBtn}`}
-        >
-          <Image
-            alt="shareResultSelf"
-            src={`${RESLUT_PAGE_CONSTANTS.DFAULT_IMG_PATH}bt_priamry_link copy.svg`}
-            width={224}
-            height={56}
-          />
-        </button>
-      </section>
-
-      <section className={style.share}>
-        <h4 className={style.shareTitle}>닉네임 짓기 요청하기</h4>
-        <div className={style.buttons}>
+        <section className={style.soloBtn}>
           <button
-            onClick={() => onKaKaoShare(otherKey)}
-            className={style.shareBtn}
             type="button"
+            onClick={handleClipBoardSelfBtn}
+            className={`${style.copyBtn}`}
           >
             <Image
-              alt="kakaoShare"
-              src={`${RESLUT_PAGE_CONSTANTS.DFAULT_IMG_PATH}bt_kakao share.svg`}
-              width={166}
-              height={50}
+              alt="shareResultSelf"
+              src={`${RESLUT_PAGE_CONSTANTS.DFAULT_IMG_PATH}bt_priamry_link copy.svg`}
+              width={224}
+              height={56}
             />
           </button>
-          <button
-            onClick={handleClipBoardShareDirectBtn}
-            className={style.shareBtn}
-            type="button"
-          >
-            <Image
-              alt="shareReulstLink"
-              src={`${RESLUT_PAGE_CONSTANTS.DFAULT_IMG_PATH}bt_link_share.svg`}
-              width={166}
-              height={50}
-            />
-          </button>
-        </div>
-      </section>
-      {show && <Notification />}
-    </main>
+        </section>
+
+        <section className={style.share}>
+          <h4 className={style.shareTitle}>닉네임 짓기 요청하기</h4>
+          <div className={style.buttons}>
+            <button
+              onClick={() => onKaKaoShare(otherKey)}
+              className={style.shareBtn}
+              type="button"
+            >
+              <Image
+                alt="kakaoShare"
+                src={`${RESLUT_PAGE_CONSTANTS.DFAULT_IMG_PATH}bt_kakao share.svg`}
+                width={166}
+                height={50}
+              />
+            </button>
+            <button
+              onClick={handleClipBoardShareDirectBtn}
+              className={style.shareBtn}
+              type="button"
+            >
+              <Image
+                alt="shareReulstLink"
+                src={`${RESLUT_PAGE_CONSTANTS.DFAULT_IMG_PATH}bt_link_share.svg`}
+                width={166}
+                height={50}
+              />
+            </button>
+          </div>
+        </section>
+        {show && <Notification />}
+      </div>
+    </div>
   );
 }
