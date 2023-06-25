@@ -13,13 +13,11 @@
 
 .label {
   font-size: 18px;
-
   font-weight: 700;
 }
 
-.categoryInput {
+.titleInput {
   display: inline-flex;
-  width: 335px;
   padding: 12px 91px;
   justify-content: center;
   align-items: center;
@@ -164,4 +162,5 @@
   font-family: Pretendard;
   font-weight: 700;
   line-height: 120%;
+  border: none;
 }

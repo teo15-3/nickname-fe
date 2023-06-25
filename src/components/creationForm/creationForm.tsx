@@ -29,20 +29,23 @@ export default function CreationForm() {
   };
 
   const handleTagBtn = () => {
-    setTags((prevTags) => {
-      if (prevTags.length < 5) {
-        return [...prevTags, tagValue];
-      }
-      return prevTags;
-    });
-    setTagValue("");
-  };
-
-  const handleTagInputKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && tagValue !== "") {
+    if (tagValue.trim() !== "" && tagValue.length) {
       setTags((prevTags) => {
         if (prevTags.length < 5) {
-          return [...prevTags, tagValue];
+          return [...prevTags, tagValue.trim()];
+        }
+        return prevTags;
+      });
+      setTagValue("");
+    }
+  };
+
+  const handleTagInputKeyPress = (e: KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === "Enter" && tagValue.trim() !== "") {
+      const newTag = tagValue.trim();
+      setTags((prevTags) => {
+        if (prevTags.length < 5) {
+          return [...prevTags, newTag];
         }
         return prevTags;
       });
@@ -54,7 +57,7 @@ export default function CreationForm() {
     setTags((prevTags) => prevTags.filter((_, i) => i !== index));
   };
 
-  const isFormValid = category !== "" && tags.length > 0;
+  const isFormValid = title !== "" && category !== "" && tags.length > 0;
 
   const handleSubmit = async () => {
     if (!isFormValid || isSubmitting) {
@@ -107,7 +110,7 @@ export default function CreationForm() {
   };
 
   const isWritingTag = () => {
-    return tagValue.length > 0;
+    return tagValue.trim().length > 0;
   };
 
   return (
@@ -130,7 +133,7 @@ export default function CreationForm() {
           </div>
           <div className={styles.center}>
             <input
-              className={styles.categoryInput}
+              className={styles.titleInput}
               type="text"
               placeholder="귀엽고 깜직한데 만만치 않은"
               value={title}
@@ -159,11 +162,19 @@ export default function CreationForm() {
               className={styles.select}
               value={category}
               onChange={handleCategoryChange}
-              style={{
-                fontFamily: "Pretendard",
-                color: "#8B8B8B",
-                fontSize: "14px",
-              }}
+              style={
+                hasCategory()
+                  ? {
+                      fontFamily: "Pretendard",
+                      color: "#1A1A1A",
+                      fontSize: "14px",
+                    }
+                  : {
+                      fontFamily: "Pretendard",
+                      color: "#8B8B8B",
+                      fontSize: "14px",
+                    }
+              }
             >
               <option value="" style={{ display: "none" }}>
                 선택하세요
@@ -199,7 +210,7 @@ export default function CreationForm() {
             <input
               className={styles.tagInput}
               type="text"
-              onKeyDown={handleTagInputKeyDown}
+              onKeyPress={handleTagInputKeyPress}
               onChange={handleTagValueChange}
               style={{ fontFamily: "Pretendard" }}
               value={tagValue}
@@ -214,6 +225,7 @@ export default function CreationForm() {
               className={
                 isWritingTag() ? styles.tagButton : styles.disabledTagButton
               }
+              disabled={!isWritingTag()}
               onClick={handleTagBtn}
             >
               추가
@@ -247,11 +259,12 @@ export default function CreationForm() {
           className={styles.submitBtn}
           onClick={handleSubmit}
           disabled={!isFormValid}
+          style={isFormValid ? {} : { backgroundColor: "#8B8B8B" }}
         >
           입력 완료{" "}
           <Image
             src="/assets/img/creation/ic_heart.svg"
-            alt="삭제버튼"
+            alt="입력완료"
             width={24}
             height={24}
             className={styles.imageInline}
