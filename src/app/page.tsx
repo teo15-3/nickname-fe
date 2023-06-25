@@ -19,7 +19,7 @@ export default function Home() {
           </h1>
         </header>
         <section>
-          <div className={styles.imgWrapper}>
+          <div className={styles.imgWrapper} style={{ margin: "30px" }}>
             <Image
               src="/assets/img/img_jamini.png"
               alt="잼민이"
@@ -33,7 +33,7 @@ export default function Home() {
               유니크하고 모던하고 대중적이지만 시크하고 유머러스한 <br />{" "}
               닉네임을 얻어갔습니다.
             </div>
-            <Link href="/create">
+            <Link href="/creation">
               <button type="button" className={styles.linkButton}>
                 닉네임 지어줘 &#9829;
               </button>

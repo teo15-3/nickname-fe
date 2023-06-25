@@ -3,10 +3,15 @@
 .main {
   background: #ffee00;
   font-family: "Pretendard";
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Pretendard";
 }
 
 .introPageLayout {
-  min-height: 1024px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
