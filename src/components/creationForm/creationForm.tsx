@@ -185,10 +185,10 @@ export default function CreationForm() {
               >
                 선택하세요
               </option>
-              <option value="1">게임에서</option>
-              <option value="2">별명으로</option>
-              <option value="3">회사에서</option>
-              <option value="4">무지성으로</option>
+              <option value="게임에서">게임에서</option>
+              <option value="별명으로">별명으로</option>
+              <option value="회사에서">회사에서</option>
+              <option value="무지성으로">무지성으로</option>
             </select>
           </div>
         </div>
