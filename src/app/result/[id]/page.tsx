@@ -76,6 +76,8 @@ export default function Create({ params }: Props) {
     fetchOtherKey();
   }, []);
 
+  console.log(data);
+
   const { category, title, nicknames, tags } = data;
 
   const showCopyResultUiHandle = () => {
@@ -93,7 +95,7 @@ export default function Create({ params }: Props) {
   };
 
   const handleClipBoardShareDirectBtn = () => {
-    const recommendataionUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}/recommendation/${otherKey}`;
+    const recommendataionUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}recommendation/${otherKey}`;
     copy(recommendataionUrl).then(showCopyResultUiHandle);
   };
 
