@@ -14,6 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ko">
+      <head>
+        <meta property="og:image" content="/assets/img/img_kakao_share.png" />
+      </head>
       <body>{children}</body>
     </html>
   );
