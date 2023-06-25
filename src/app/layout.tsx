@@ -24,6 +24,9 @@ export default function RootLayout({
         onLoad={() => kakaoInit()}
       />
       <head>
+        <title>
+          유니크하면서 모던하고 대중적이지만 시크하고 유러스한 닉네임 지어줘
+        </title>
         <meta
           property="og:title"
           content="유니크하면서 모던하고 대중적이지만 시크하고 유러스한 닉네임 지어줘"
