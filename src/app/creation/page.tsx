@@ -12,6 +12,7 @@ export default function Create() {
           alt="말풍선"
           width={258}
           height={136}
+          style={{ marginLeft: "20px" }}
         />
         <CreationForm />
       </div>
