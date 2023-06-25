@@ -2,7 +2,7 @@
 
 .main {
   font-family: "Pretendard";
-  height: 100vh;
+  height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,9 +32,5 @@
 }
 
 .linkButton {
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 64px;
-  // margin-bottom: 64px;
+  margin-top: 166px;
 }
