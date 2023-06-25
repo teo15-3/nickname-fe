@@ -2,22 +2,25 @@
 
 import { useState, KeyboardEvent, ChangeEvent } from "react";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import styles from "./creationForm.module.scss";
 
 export default function CreationForm() {
   const [category, setCategory] = useState<string>("");
-  const [whereToUse, setWhereToUse] = useState<string>("");
+  const [title, setTitle] = useState<string>("");
   const [tags, setTags] = useState<string[]>([]);
   const [tagValue, setTagValue] = useState<string>("");
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+  const router = useRouter();
 
-  const handleCategoryChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleTitleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value.slice(0, 15);
-    setCategory(value);
+    setTitle(value);
   };
 
-  const handleWhereToUseChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleCategoryChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const { value } = e.target;
-    setWhereToUse(value);
+    setCategory(value);
   };
 
   const handleTagValueChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -53,20 +56,54 @@ export default function CreationForm() {
 
   const isFormValid = category !== "" && tags.length > 0;
 
-  const handleSubmit = () => {
-    console.log({ category, whereToUse, tags });
+  const handleSubmit = async () => {
+    if (!isFormValid || isSubmitting) {
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(
+        "https://api.fire-lighter.kr/nickname-request",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ category, tags, title }),
+        },
+      );
+
+      if (response.ok) {
+        const data = await response.json();
+        const myKey = data.mykey;
+        if (myKey) {
+          // 성공적인 응답 처리 후 페이지 이동
+          router.push(`/result/${myKey}`);
+        }
+      } else {
+        // 요청 실패 처리
+        alert("요청 실패");
+      }
+    } catch (error) {
+      // 에러 처리
+      alert("에러 발생", error);
+    }
+
+    setIsSubmitting(false);
   };
 
-  const hasCategory = () => {
-    return category.length > 0;
+  const hasTitle = () => {
+    return title.length > 0;
   };
 
   const hasTag = () => {
     return tags.length > 0;
   };
 
-  const hasWhereToUse = () => {
-    return whereToUse !== "";
+  const hasCategory = () => {
+    return category !== "";
   };
 
   const isWritingTag = () => {
@@ -80,7 +117,7 @@ export default function CreationForm() {
           <div className={styles.labelWrapper} style={{ marginBottom: "10px" }}>
             <Image
               src={
-                hasCategory()
+                hasTitle()
                   ? "/assets/img/creation/ic_check_completed.svg"
                   : "/assets/img/creation/ic_check_uncompleted.svg"
               }
@@ -96,8 +133,8 @@ export default function CreationForm() {
               className={styles.categoryInput}
               type="text"
               placeholder="귀엽고 깜직한데 만만치 않은"
-              value={category}
-              onChange={handleCategoryChange}
+              value={title}
+              onChange={handleTitleChange}
               style={{ fontFamily: "Pretendard" }}
             />
           </div>
@@ -106,7 +143,7 @@ export default function CreationForm() {
           <div className={styles.labelWrapper} style={{ marginBottom: "11px" }}>
             <Image
               src={
-                hasWhereToUse()
+                hasCategory()
                   ? "/assets/img/creation/ic_check_completed.svg"
                   : "/assets/img/creation/ic_check_uncompleted.svg"
               }
@@ -120,8 +157,8 @@ export default function CreationForm() {
           <div className={styles.center}>
             <select
               className={styles.select}
-              value={whereToUse}
-              onChange={handleWhereToUseChange}
+              value={category}
+              onChange={handleCategoryChange}
               style={{
                 fontFamily: "Pretendard",
                 color: "#8B8B8B",
