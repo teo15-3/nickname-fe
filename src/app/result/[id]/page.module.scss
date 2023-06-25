@@ -109,3 +109,9 @@ $list-title-color: #1400f5;
     transform: translate(-50%);
   }
 }
+
+@media screen and (min-width: 350px) {
+  .titles {
+    margin-bottom: 16px;
+  }
+}
