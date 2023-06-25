@@ -23,7 +23,7 @@ export default function Error({
       <div className={styles.layout}>
         <header className={styles.header}>
           <Image
-            src="/assets/ic_error.svg"
+            src="/assets/img/error/ic_error.svg"
             alt="error icon"
             width="42"
             height="42"
@@ -37,20 +37,21 @@ export default function Error({
         </header>
         <section className={styles.imgWrapper}>
           <Image
-            src="/assets/img/img_jamin_green.png"
+            src="/assets/img/error/img_jamini3x.png"
             alt="잼민이"
             width="154"
             height="181"
           />
         </section>
         <section className={styles.footer}>
-          <button
-            type="button"
-            className={styles.linkButton}
+          <Image
+            src="/assets/img/error/bt_primary.svg"
+            alt="닉네임 지어줘"
+            width="167"
+            height="56"
             onClick={() => router.push("/")}
-          >
-            처음으로 돌아가기 &#9829;
-          </button>
+            className={styles.linkButton}
+          />
         </section>
       </div>
     </main>
