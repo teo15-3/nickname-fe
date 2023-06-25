@@ -1,0 +1,89 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
+
+$gray-100: #3a3a3a;
+$bg-color: #fcfcfc;
+$tag-bg: #f1f1f1;
+$gray-50: #6d6d6d;
+$tag-font-size: 14px;
+$font-weight-medium: 500;
+$semi-bold: 600;
+
+$listup-border-color: #8491ff;
+$listup-bg-color: #dfe2ff;
+
+$share-title-color: #8b8b8b;
+
+$list-title-color: #1400f5;
+
+.wrapper {
+  width: 375px;
+  background-color: $bg-color;
+  margin: 0 20px;
+  margin-top: 80px;
+  margin-bottom: 64px;
+  font-family: "Pretendard";
+}
+
+.titles {
+  margin-bottom: 16px;
+}
+
+.titles > *:not(:last-child) {
+  margin-bottom: 4px;
+}
+
+.title {
+  color: $gray-100;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.tagSection {
+  margin-bottom: 40px;
+}
+
+.imgcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 335px;
+  height: 56px;
+}
+.imgcontainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.share {
+  position: absolute;
+  bottom: 64px;
+}
+.shareTitle {
+  color: $share-title-color;
+  font-weight: $semi-bold;
+  margin-bottom: 9px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.shareBtn {
+  padding: 0;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+//일정이상 내려가면 absolute 풂으로 동적 마진 고정으로 변경
+
+@media screen and (max-height: 730px) {
+  .share {
+    position: relative;
+    margin-top: 71px;
+    margin-bottom: 64px;
+  }
+}
