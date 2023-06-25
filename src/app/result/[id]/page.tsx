@@ -89,13 +89,16 @@ export default function Create({ params }: Props) {
   };
 
   const handleClipBoardSelfBtn = () => {
-    const curPath = window.location.pathname;
+    const curPath = window.location.pathname.slice(1);
     const url = `${process.env.NEXT_PUBLIC_DOMAIN_URL}${curPath}`;
+    console.log(url, "셀프");
+
     copy(url).then(showCopyResultUiHandle);
   };
 
   const handleClipBoardShareDirectBtn = () => {
     const recommendataionUrl = `${process.env.NEXT_PUBLIC_DOMAIN_URL}recommendation/${otherKey}`;
+    console.log(recommendataionUrl, "추천 URL");
     copy(recommendataionUrl).then(showCopyResultUiHandle);
   };
 
