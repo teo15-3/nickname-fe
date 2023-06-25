@@ -88,7 +88,7 @@ export default function CreationForm() {
       }
     } catch (error) {
       // 에러 처리
-      alert("에러 발생", error);
+      alert("에러 발생");
     }
 
     setIsSubmitting(false);
