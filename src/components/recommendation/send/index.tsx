@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "./index.module.scss";
+import { saveNickName } from "../../../lib/api/recommendation";
 
 interface SendProps {
   id: string;
@@ -28,8 +29,14 @@ export default function Send({ id }: SendProps) {
     setIsInputFilled(false);
   };
 
-  const handleButton = () => {
-    router.push("/completion");
+  const handleButton = async () => {
+    try {
+      setIsInputFilled(false);
+      const res = await saveNickName({ id, nickname });
+      router.push("/completion");
+    } catch (e) {
+      alert("전송 할 수 없습니다.");
+    }
   };
 
   return (
