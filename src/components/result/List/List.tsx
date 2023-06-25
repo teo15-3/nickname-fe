@@ -3,17 +3,15 @@ import style from "./List.module.scss";
 
 const COMMON_IMG_FILE_PATH = "/assets/img/resultPageEssets/";
 
-const List = ({ list, mykey }: { list: string; mykey: string }) => {
-  const handleDeleteBtn = async (mykey: string, nickname: string) => {
-    const res = await fetch(
-      `https://api.fire-lighter.kr/nickname/${mykey}/nickname-received?nickname=${nickname}`,
-      {
-        method: "DELETE",
-      },
-    );
-    // 나머지 코드 작성
-  };
-
+const List = ({
+  handleDelete,
+  list,
+  mykey,
+}: {
+  handleDelete: (a: string, b: string) => Promise<void>;
+  list: string;
+  mykey: string;
+}) => {
   return (
     <li className={style.listContainer}>
       <div className={style.list}>
@@ -21,7 +19,7 @@ const List = ({ list, mykey }: { list: string; mykey: string }) => {
           <h5 className={style.listItemTitle}>{list}</h5>
           <button
             type="button"
-            onClick={() => handleDeleteBtn(mykey, list)}
+            onClick={() => handleDelete(mykey, list)}
             className={style.listItemIcon}
           >
             <Image
