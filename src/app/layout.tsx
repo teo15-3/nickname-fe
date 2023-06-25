@@ -24,7 +24,10 @@ export default function RootLayout({
         onLoad={() => kakaoInit()}
       />
       <head>
-        <meta property="og:image" content="/assets/img/img_kakao_share.png" />
+        <meta
+          property="og:image"
+          content="https://velog.velcdn.com/images/y00eunji/post/2a869576-b8f3-4471-b176-ca8364a5fb6a/image.png"
+        />
       </head>
       <body>{children}</body>
     </html>
