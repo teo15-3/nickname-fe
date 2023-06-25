@@ -102,7 +102,7 @@ export default function Create({ params }: Props) {
   return (
     <main className={style.wrapper}>
       <section className={style.titles}>
-        <h3 className={style.title}>{`${category}`}</h3>
+        <h3 className={style.title}>{`${category} 사용할`}</h3>
         <h3 className={style.title}>{`${title}`}</h3>
         <h3 className={style.title}>닉네임목록</h3>
       </section>

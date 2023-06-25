@@ -10,6 +10,7 @@ $listup-bg-color: #dfe2ff;
   overflow-y: scroll;
   margin-bottom: 16px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
 }
 
 .listUpContainer::-webkit-scrollbar {
@@ -18,6 +19,7 @@ $listup-bg-color: #dfe2ff;
 
 .listUpContainer::-webkit-scrollbar-thumb {
   background-color: $listup-border-color;
+  border-radius: 4px;
 }
 
 .listUpContainer::-webkit-scrollbar-track {
