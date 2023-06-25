@@ -32,7 +32,7 @@ export default function Home() {
         <section>
           <div className={styles.imgWrapper} style={{ margin: "30px" }}>
             <Image
-              src="/assets/img/img_jamini.png"
+              src="/assets/img/intro/img_jamini.png"
               alt="잼민이"
               width="350"
               height="356"
