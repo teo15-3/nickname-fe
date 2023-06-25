@@ -171,7 +171,7 @@ export default function CreationForm() {
                     }
                   : {
                       fontFamily: "Pretendard",
-                      color: "#8B8B8B",
+                      color: "#afafaf",
                       fontSize: "14px",
                     }
               }
@@ -212,7 +212,12 @@ export default function CreationForm() {
               type="text"
               onKeyPress={handleTagInputKeyPress}
               onChange={handleTagValueChange}
-              style={{ fontFamily: "Pretendard" }}
+              style={{
+                fontFamily: "Pretendard",
+                fontSize: "14px",
+                color: "#AFAFAF",
+                textAlign: "center",
+              }}
               value={tagValue}
               placeholder={
                 hasTag()
@@ -259,7 +264,7 @@ export default function CreationForm() {
           className={styles.submitBtn}
           onClick={handleSubmit}
           disabled={!isFormValid}
-          style={isFormValid ? {} : { backgroundColor: "#8B8B8B" }}
+          style={isFormValid ? {} : { backgroundColor: "#AFAFAF" }}
         >
           입력 완료{" "}
           <Image
