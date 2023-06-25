@@ -48,6 +48,7 @@ export default function Send({ id }: SendProps) {
           placeholder="닉네임을 지어주세요."
           value={nickname}
           onChange={handleInputChange}
+          maxLength={15}
         />
         <button
           type="button"
