@@ -12,30 +12,11 @@ export const onKaKaoShare = async (param: string) => {
     content: {
       title: "유니크하고 모던하고 멋있는 닉네임 만들어줘!",
       imageUrl:
-        "https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg",
+        "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fd2wnCs%2Fbtslb6689AW%2FLH80Aid2KFDvIkNXgKbuok%2Fimg.png",
       link: {
         mobileWebUrl: `${process.env.NEXT_PUBLIC_DOMAIN_URL}`,
         webUrl: `${process.env.NEXT_PUBLIC_DOMAIN_URL}`,
       },
-    },
-    itemContent: {
-      profileText: "Kakao",
-      profileImageUrl:
-        "https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
-      titleImageUrl:
-        "https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png",
-      titleImageText: "Cheese cake",
-      titleImageCategory: "Cake",
-      items: [
-        {
-          item: "첫번째",
-          itemOp: "모던한",
-        },
-        {
-          item: "두번째",
-          itemOp: "유니크한",
-        },
-      ],
     },
 
     buttons: [
