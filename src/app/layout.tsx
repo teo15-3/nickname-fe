@@ -23,6 +23,9 @@ export default function RootLayout({
         src="https://developers.kakao.com/sdk/js/kakao.js"
         onLoad={() => kakaoInit()}
       />
+      <head>
+        <meta property="og:image" content="/assets/img/img_kakao_share.png" />
+      </head>
       <body>{children}</body>
     </html>
   );
