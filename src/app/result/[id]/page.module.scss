@@ -100,7 +100,12 @@ $list-title-color: #1400f5;
   }
 }
 @media screen and (min-width: 340px) {
-  .wrapper {
-    margin-left: 50px;
+  .titles {
+    margin: auto;
+    margin-left: 20px;
+  }
+  .share {
+    left: 50%;
+    transform: translate(-50%);
   }
 }
