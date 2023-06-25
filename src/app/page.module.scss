@@ -22,8 +22,8 @@
   font-weight: 900;
   line-height: 130%;
 
-  // margin-top: 2.625rem;
   margin-left: 1.25rem;
+  margin-top: 0.5rem;
 }
 
 .highlightText {
@@ -31,18 +31,25 @@
 }
 
 .section {
-  margin-top: 3.125rem;
+  margin-top: 2rem;
 }
 
 .ImgWrapper {
   display: flex;
   justify-content: flex-end;
+
+  .responsiveImage {
+    padding: 0;
+    position: relative;
+    width: 19rem;
+    height: 20rem;
+  }
 }
 
 .footer {
   text-align: center;
-  margin-top: 1.5rem;
-  margin-bottom: 64px;
+  margin-top: 1.3rem;
+  margin-bottom: 1rem;
 
   .description {
     font-size: 12px;
@@ -52,6 +59,17 @@
   }
 
   .linkButton {
-    margin-top: 8px;
+    margin-top: 0.5rem;
+  }
+}
+
+.nickNameImgWrapper {
+  display: flex;
+  justify-content: center;
+
+  .nickNameImg {
+    position: relative;
+    width: 9.5rem;
+    height: 3.4rem;
   }
 }

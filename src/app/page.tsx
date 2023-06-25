@@ -31,13 +31,15 @@ export default function Home() {
         </header>
         <section className={styles.section}>
           <div className={styles.ImgWrapper}>
-            <Image
-              src="/assets/img/intro/img_jamini.png"
-              alt="잼민이"
-              width="300"
-              height="306"
-              className={styles.jaminiImg}
-            />
+            <div className={styles.responsiveImage}>
+              <Image
+                src="/assets/img/intro/img_jamini.png"
+                alt="잼민이"
+                layout="fill"
+                objectFit="contain"
+                className={styles.jaminiImg}
+              />
+            </div>
           </div>
           <div className={styles.footer}>
             <div className={styles.description}>
@@ -47,13 +49,17 @@ export default function Home() {
               닉네임을 얻어갔습니다.
             </div>
             <Link href="/creation">
-              <Image
-                src="/assets/img/intro/bt_primary_start.svg"
-                alt="닉네임 지어줘"
-                width="167"
-                height="55"
-                className={styles.linkButton}
-              />
+              <div className={styles.nickNameImgWrapper}>
+                <div className={styles.nickNameImg}>
+                  <Image
+                    src="/assets/img/intro/bt_primary_start.svg"
+                    alt="닉네임 지어줘"
+                    layout="fill"
+                    objectFit="contain"
+                    className={styles.linkButton}
+                  />
+                </div>
+              </div>
             </Link>
           </div>
         </section>
