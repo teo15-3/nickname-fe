@@ -32,12 +32,6 @@ $list-title-color: #1400f5;
   margin-bottom: 4px;
 }
 
-.listUpContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
 .title {
   color: $gray-100;
   font-weight: bold;
@@ -87,6 +81,8 @@ $list-title-color: #1400f5;
 }
 
 .soloBtn {
+  left: 50%;
+  transform: translate(-50%);
   position: absolute;
   bottom: 207px;
 }
@@ -105,6 +101,6 @@ $list-title-color: #1400f5;
 }
 @media screen and (min-width: 340px) {
   .wrapper {
-    margin-left: 60px;
+    margin-left: 50px;
   }
 }
