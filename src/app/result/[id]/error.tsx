@@ -46,7 +46,7 @@ export default function Error({
         <section className={styles.footer}>
           <Image
             src="/assets/img/error/bt_primary.svg"
-            alt="닉네임 지어줘"
+            alt="처음으로 돌아가기"
             width="167"
             height="56"
             onClick={() => router.push("/")}
