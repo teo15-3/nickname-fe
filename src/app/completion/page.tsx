@@ -17,12 +17,12 @@ export default function Completion() {
         </div>
 
         <div className={styles.title}>
-          <strong className={styles.highlightText}>유니크</strong>하면서 <br />
-          <strong className={styles.highlightText}>모던</strong>하고{" "}
-          <strong className={styles.highlightText}>대중적</strong>이지만 <br />
-          <strong className={styles.highlightText}>시크</strong>하고{" "}
-          <strong className={styles.highlightText}>유머러스</strong>한 <br />
-          닉네임 지어줘
+          <strong className={styles.highlightText}>유니크</strong>하면서{" "}
+          <strong className={styles.highlightText}>모던</strong>하고
+          <br />
+          <strong className={styles.highlightText}>대중적</strong>이지만{" "}
+          <strong className={styles.highlightText}>시크</strong>하고 <br />
+          <strong className={styles.highlightText}>유머러스</strong>한 닉네임
           <div className={styles.sendText}>전송완료!</div>
         </div>
       </section>
