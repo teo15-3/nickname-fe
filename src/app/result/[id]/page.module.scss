@@ -16,7 +16,7 @@ $share-title-color: #8b8b8b;
 $list-title-color: #1400f5;
 
 .wrapper {
-  width: 375px;
+  width: 100%;
   background-color: #ffffff;
   margin: 20px 20px;
   margin-top: 80px;
@@ -30,6 +30,12 @@ $list-title-color: #1400f5;
 
 .titles > *:not(:last-child) {
   margin-bottom: 4px;
+}
+
+.listUpContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
@@ -65,8 +71,10 @@ $list-title-color: #1400f5;
 }
 
 .buttons {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -93,5 +101,10 @@ $list-title-color: #1400f5;
   }
   .soloBtn {
     position: static;
+  }
+}
+@media screen and (min-width: 340px) {
+  .wrapper {
+    margin-left: 40px;
   }
 }
