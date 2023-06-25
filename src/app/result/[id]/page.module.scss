@@ -1,7 +1,7 @@
 @import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
 
 $gray-100: #3a3a3a;
-$bg-color: #fcfcfc;
+$bg-color: #ffffff;
 $tag-bg: #f1f1f1;
 $gray-50: #6d6d6d;
 $tag-font-size: 14px;
@@ -18,7 +18,7 @@ $list-title-color: #1400f5;
 .wrapper {
   width: 375px;
   background-color: #ffffff;
-  margin: 0 20px;
+  margin: 20px 20px;
   margin-top: 80px;
   margin-bottom: 64px;
   font-family: "Pretendard";
@@ -30,6 +30,12 @@ $list-title-color: #1400f5;
 
 .titles > *:not(:last-child) {
   margin-bottom: 4px;
+}
+
+.listUpContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .title {
@@ -65,8 +71,10 @@ $list-title-color: #1400f5;
 }
 
 .buttons {
+  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 
@@ -93,5 +101,10 @@ $list-title-color: #1400f5;
   }
   .soloBtn {
     position: static;
+  }
+}
+@media screen and (min-width: 340px) {
+  .wrapper {
+    margin-left: 60px;
   }
 }
