@@ -1,0 +1,15 @@
+$font-weight-medium: 500;
+$gray-100: #3a3a3a;
+$tag-font-size: 14px;
+$tag-bg: #f1f1f1;
+
+.tag {
+  background-color: $tag-bg;
+  text-align: center;
+  padding: 8px 14px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  font-size: $tag-font-size;
+  color: $gray-100;
+  font-weight: $font-weight-medium;
+}
