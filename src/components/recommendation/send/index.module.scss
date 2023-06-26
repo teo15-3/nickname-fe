@@ -16,13 +16,8 @@
   top: 50%;
   transform: translateY(-50%);
   right: 20px;
-  border: none;
-  outline: none;
+
   cursor: pointer;
-  background: #afafaf;
-  color: white;
-  font-size: 12px;
-  border-radius: 10px;
 }
 
 .input {
@@ -74,6 +69,26 @@
   width: 120px;
   height: 56px;
   background: #afafaf;
+  color: white;
+
+  margin-top: 13px;
+  padding: 17px 20px;
+
+  border-radius: 50px;
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: not-allowed;
+}
+
+.sendingButton {
+  width: 120px;
+  height: 56px;
+  background: #1400f5;
+
   color: white;
 
   margin-top: 13px;

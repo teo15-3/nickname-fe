@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import styles from "./index.module.scss";
 import { saveNickName } from "../../../lib/api/recommendation";
 
@@ -14,6 +15,7 @@ export default function Send({ id }: SendProps) {
 
   const [nickname, setNiname] = useState("");
   const [isInputFilled, setIsInputFilled] = useState(false);
+  const [isSending, setIsSending] = useState(false);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setNiname(event.target.value);
@@ -31,8 +33,8 @@ export default function Send({ id }: SendProps) {
 
   const handleButton = async () => {
     try {
-      setIsInputFilled(false);
-      const res = await saveNickName({ id, nickname });
+      setIsSending(true);
+      await saveNickName({ id, nickname });
       router.push("/completion");
     } catch (e) {
       alert("전송 할 수 없습니다.");
@@ -50,24 +52,25 @@ export default function Send({ id }: SendProps) {
           onChange={handleInputChange}
           maxLength={15}
         />
-        <button
-          type="button"
+        <Image
+          src="/assets/img/recommendation/ic_delete.svg"
+          alt="삭제버튼"
+          width={24}
+          height={24}
           className={`${
             isInputFilled ? styles.inputClearBtnActive : styles.inputClearBtn
           }`}
           onClick={handleInputClear}
-        >
-          x
-        </button>
+        />
       </div>
 
       <button
-        className={styles.sendButton}
+        className={isSending ? styles.sendingButton : styles.sendButton}
         type="button"
         onClick={handleButton}
-        disabled={!isInputFilled}
+        disabled={!isInputFilled || isSending}
       >
-        전송
+        {isSending ? "전송 중.." : "전송"}
       </button>
     </section>
   );
