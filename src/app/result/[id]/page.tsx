@@ -41,7 +41,7 @@ export default function Create({ params }: Props) {
 
   const handleDeleteBtn = async (mykey: string, nickname: string) => {
     const res = await fetch(
-      `https://api.fire-lighter.kr/nickname/${mykey}/nickname-received?nickname=${nickname}`,
+      `https://api.uniqname.monster/nickname/${mykey}/nickname-received?nickname=${nickname}`,
       {
         method: "DELETE",
       },
@@ -58,7 +58,7 @@ export default function Create({ params }: Props) {
   useEffect(() => {
     const fetchResultData = async () => {
       const res = await fetch(
-        `https://api.fire-lighter.kr/nickname/${params.id}/nickname-received`,
+        `https://api.uniqname.monster/nickname/${params.id}/nickname-received`,
       )
         .then((res) => res.json())
         .then(setData);
@@ -66,7 +66,7 @@ export default function Create({ params }: Props) {
 
     const fetchOtherKey = async () => {
       const res = await fetch(
-        `https://api.fire-lighter.kr/key?mykey=${params.id}`,
+        `https://api.uniqname.monster/key?mykey=${params.id}`,
       )
         .then((res) => res.json())
         .then((res) => setOtherKey(res.otherkey));
