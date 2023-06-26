@@ -92,9 +92,9 @@ export default function CreationForm() {
     } catch (error) {
       // 에러 처리
       alert("에러 발생");
+    } finally {
+      setIsSubmitting(false);
     }
-
-    setIsSubmitting(false);
   };
 
   const hasTitle = () => {
@@ -264,9 +264,11 @@ export default function CreationForm() {
           className={styles.submitBtn}
           onClick={handleSubmit}
           disabled={!isFormValid}
-          style={isFormValid ? {} : { backgroundColor: "#AFAFAF" }}
+          style={
+            isFormValid || isSubmitting ? {} : { backgroundColor: "#AFAFAF" }
+          }
         >
-          입력 완료{" "}
+          {isSubmitting ? "요청 생성 중.." : "입력 완료"}
           <Image
             src="/assets/img/creation/ic_heart.svg"
             alt="입력완료"
