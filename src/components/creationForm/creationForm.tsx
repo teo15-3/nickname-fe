@@ -68,7 +68,7 @@ export default function CreationForm() {
 
     try {
       const response = await fetch(
-        "https://api.fire-lighter.kr/nickname-request",
+        "https://api.uniqname.monster/nickname-request",
         {
           method: "POST",
           headers: {
