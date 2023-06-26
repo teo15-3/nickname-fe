@@ -1,0 +1,125 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
+
+$gray-100: #3a3a3a;
+$bg-color: #ffffff;
+$tag-bg: #f1f1f1;
+$gray-50: #6d6d6d;
+$tag-font-size: 14px;
+$font-weight-medium: 500;
+$semi-bold: 600;
+
+$listup-border-color: #8491ff;
+$listup-bg-color: #dfe2ff;
+
+$share-title-color: #8b8b8b;
+
+$list-title-color: #1400f5;
+
+.layoutContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wrapper {
+  width: 375px;
+  background-color: #ffffff;
+  font-family: "Pretendard";
+}
+
+.titles {
+  padding-top: 20px;
+  padding-bottom: 12px;
+}
+
+.title {
+  color: $gray-100;
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 4px;
+}
+
+.tagSection {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.imgcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 335px;
+  height: 56px;
+}
+.imgcontainer img {
+  width: 100%;
+  height: 100%;
+}
+
+.shareTitle {
+  color: $share-title-color;
+  font-weight: $semi-bold;
+  margin-bottom: 9px;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.listUpContainer {
+  width: 100%;
+  height: 223px;
+  margin-bottom: 17px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.copyBtn {
+  padding: 0;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.shareBtn {
+  padding: 0;
+  outline: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 164px;
+  height: 50px;
+}
+
+.soloBtn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 72px;
+  padding: 0;
+  outline: none;
+  background: none;
+  border: none;
+}
+
+.shareTitle {
+  margin-left: 20px;
+}
+
+.titles {
+  margin: auto;
+  margin-left: 20px;
+}
+
+@media screen and (min-width: 350px) {
+  .titles {
+    margin-bottom: 16px;
+  }
+}

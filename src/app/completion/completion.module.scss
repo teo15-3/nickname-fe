@@ -1,0 +1,37 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
+
+.main {
+  font-family: "Pretendard";
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section {
+  margin-bottom: 166px;
+  padding-top: 50px;
+}
+
+.imgWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+}
+
+.highlightText {
+  color: #1400f5;
+}
+
+.sendText {
+  margin-top: 24px;
+}
