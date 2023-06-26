@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import styles from "./index.module.scss";
 import { saveNickName } from "../../../lib/api/recommendation";
 
@@ -50,15 +51,16 @@ export default function Send({ id }: SendProps) {
           onChange={handleInputChange}
           maxLength={15}
         />
-        <button
-          type="button"
+        <Image
+          src="/assets/img/recommendation/ic_delete.svg"
+          alt="삭제버튼"
+          width={24}
+          height={24}
           className={`${
             isInputFilled ? styles.inputClearBtnActive : styles.inputClearBtn
           }`}
           onClick={handleInputClear}
-        >
-          x
-        </button>
+        />
       </div>
 
       <button
