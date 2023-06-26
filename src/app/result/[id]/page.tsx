@@ -118,15 +118,11 @@ export default function Create({ params }: Props) {
         </section>
 
         <section className={style.listUpContainer}>
-          {nicknames.length !== 0 ? (
-            <Lists
-              handleDelete={handleDeleteBtn}
-              mykey={params.id}
-              lists={nicknames}
-            />
-          ) : (
-            <p />
-          )}
+          <Lists
+            handleDelete={handleDeleteBtn}
+            mykey={params.id}
+            lists={nicknames}
+          />
         </section>
 
         <section className={style.soloBtn}>
@@ -142,6 +138,11 @@ export default function Create({ params }: Props) {
               height={56}
             />
           </button>
+        </section>
+        <section className={style.desc}>
+          결과 링크를 꼭 복사해두세요
+          <br />
+          해당 링크가 없으면 결과 확인이 불가능 합니다.
         </section>
 
         <section className={style.share}>
