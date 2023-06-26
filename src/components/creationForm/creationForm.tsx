@@ -271,7 +271,7 @@ export default function CreationForm() {
           {isSubmitting ? "요청 생성 중.." : "입력 완료"}
           <Image
             src="/assets/img/creation/ic_heart.svg"
-            alt="입력완료"
+            alt="하트"
             width={24}
             height={24}
             className={styles.imageInline}
