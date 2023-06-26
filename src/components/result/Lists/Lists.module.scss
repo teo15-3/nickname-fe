@@ -24,3 +24,19 @@ $listup-bg-color: #dfe2ff;
 .listUpContainer::-webkit-scrollbar-track {
   background-color: transparent;
 }
+
+.descContainer {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.desc {
+  color: var(--grey-primary-50, #707cd6);
+  text-align: center;
+  font-size: 12px;
+  font-family: Pretendard;
+  font-weight: 500;
+  line-height: 120%;
+  text-align: center;
+  margin-bottom: 30px;
+}
