@@ -1,27 +1,14 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.scss";
 
 import getIntroData from "../lib/api/intro/index";
 
-export default function Home() {
-  const [userCount, setUserCount] = useState(0);
-
-  useEffect(() => {
-    const getUserCount = async () => {
-      try {
-        const res = await getIntroData();
-        setUserCount(res.userCount);
-      } catch (e) {
-        return 0;
-      }
-    };
-
-    getUserCount();
-  }, []);
+export default async function Home() {
+  const res = await getIntroData();
+  const { userCount } = res;
 
   return (
     <main className={styles.main}>
