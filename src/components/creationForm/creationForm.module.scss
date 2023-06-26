@@ -2,6 +2,7 @@
 
 .formWrapper {
   margin-top: 30px;
+  font-family: Pretendard;
 }
 
 .labelWrapper {
@@ -52,13 +53,17 @@
   -moz-appearance: none;
   appearance: none;
 
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
+
   display: flex;
   width: 335px;
   height: 44px;
   padding: 10px 12px 10px 12px;
   justify-content: flex-end;
   align-items: center;
-  text-align: center;
   flex-shrink: 0;
   border-radius: 10px;
   border: none;
