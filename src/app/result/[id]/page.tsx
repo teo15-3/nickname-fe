@@ -117,6 +117,10 @@ export default function Create({ params }: Props) {
           </div>
         </section>
 
+        <section className={style.listDesc}>
+          &#128204; 추천 받은 닉네임 목록 &#128204;
+        </section>
+
         <section className={style.listUpContainer}>
           <Lists
             handleDelete={handleDeleteBtn}

@@ -83,6 +83,17 @@ $list-title-color: #1400f5;
   justify-content: center;
 }
 
+.listDesc {
+  color: var(--grey-primary-50, #8491ff);
+  text-align: center;
+  font-size: 14px;
+  font-family: Pretendard;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
 .desc {
   color: var(--grey-primary-50, #8491ff);
   text-align: center;
