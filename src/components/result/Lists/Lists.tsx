@@ -12,7 +12,7 @@ const Lists = ({
 }) => {
   return (
     <ul className={style.listUpContainer}>
-      {lists.map((list, i) => (
+      {lists?.map((list, i) => (
         <List
           handleDelete={handleDelete}
           mykey={mykey}
