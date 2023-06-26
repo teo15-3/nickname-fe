@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.scss";
@@ -7,14 +8,20 @@ import styles from "./page.module.scss";
 import getIntroData from "../lib/api/intro/index";
 
 export default function Home() {
-  const getUserCount = async () => {
-    try {
-      const res = await getIntroData();
-      return res.userCount;
-    } catch (e) {
-      return 0;
-    }
-  };
+  const [userCount, setUserCount] = useState(0);
+
+  useEffect(() => {
+    const getUserCount = async () => {
+      try {
+        const res = await getIntroData();
+        setUserCount(res.userCount);
+      } catch (e) {
+        return 0;
+      }
+    };
+
+    getUserCount();
+  }, []);
 
   return (
     <main className={styles.main}>
@@ -45,7 +52,7 @@ export default function Home() {
           </div>
           <div className={styles.footer}>
             <div className={styles.description}>
-              지금까지 <b className={styles.highlightText}>{getUserCount()}</b>
+              지금까지 <b className={styles.highlightText}>{userCount}</b>
               명이 <br />
               유니크하고 모던하고 대중적이지만 시크하고 유머러스한 <br />{" "}
               닉네임을 얻어갔습니다.
