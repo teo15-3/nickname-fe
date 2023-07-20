@@ -1,0 +1,21 @@
+name: "Issue Template"
+description: "이슈를 작성해주세요."
+body:
+  - type: textarea
+    attributes:
+      label:  🛠️ Description
+      description: "이슈의 설명을 작성해 주세요."
+      placeholder: "어떤 작업을 진행할 지 간단히 설명"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: ✅ Tasks
+      description: "해야 하는 일에 대한 Tasks를 작성해 주세요."
+      placeholder: "구현할 사항들을 명시"
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 📝 Note
+      description: "참고 사항(optional)"
