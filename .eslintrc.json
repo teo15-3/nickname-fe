@@ -11,10 +11,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "@typescript-eslint",
-    "react-hooks"
-  ],
+  "plugins": ["@typescript-eslint", "react-hooks"],
   "extends": [
     "airbnb",
     "plugin:react/recommended",
@@ -34,9 +31,7 @@
     "react/jsx-filename-extension": [
       "warn",
       {
-        "extensions": [
-          ".tsx"
-        ]
+        "extensions": [".tsx"]
       }
     ],
     "import/extensions": [
@@ -58,13 +53,11 @@
         "peerDependencies": true
       }
     ],
+    "import/prefer-default-export": "off",
     "@typescript-eslint/no-var-requires": "off",
     "no-nested-ternary": "off",
     "consistent-return": "off",
-    "react/destructuring-assignment": [
-      0,
-      "always"
-    ],
+    "react/destructuring-assignment": [0, "always"],
     "no-shadow": "off",
     "default-param-last": 0,
     "no-restricted-syntax": [
@@ -75,10 +68,7 @@
     "react/function-component-definition": [
       "error",
       {
-        "namedComponents": [
-          "function-declaration",
-          "arrow-function"
-        ],
+        "namedComponents": ["function-declaration", "arrow-function"],
         "unnamedComponents": "arrow-function"
       }
     ],
@@ -92,17 +82,14 @@
     ],
     "import/no-unresolved": "off",
     "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/no-static-element-interactions": "off"
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react/require-default-props": "off",
+    "react/no-unknown-property": "warn"
   },
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".ts",
-          ".tsx",
-          ".js",
-          ".jsx"
-        ]
+        "extensions": [".ts", ".tsx", ".js", ".jsx"]
       }
     }
   }
