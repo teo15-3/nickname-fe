@@ -1,7 +1,8 @@
 import React from "react";
 
-import { Button } from "./Button";
-import "./header.css";
+// eslint-disable-next-line import/extensions
+import { Button } from "@/components/Button/Button";
+import "./header.scss";
 
 type User = {
   name: string;
