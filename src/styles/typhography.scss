@@ -1,0 +1,58 @@
+@import "./variables.scss";
+
+$h1-size: 22px;
+$h2-size: 18px;
+$h3-size: 16px;
+$h4-size: 14px;
+$h5-size: 12px;
+
+.header {
+  font-size: 34px;
+  line-height: 130%;
+  font-weight: map-get($fontWeights, black);
+}
+
+.h1Bold {
+  font-size: $h1-size;
+  line-height: 120%;
+  font-weight: bold;
+}
+
+.h2 {
+  font-size: $h2-size;
+  line-height: normal;
+}
+
+.h2Medium {
+  @extend .h2;
+  font-weight: map-get($fontWeights, medium);
+}
+
+.h2Bold {
+  @extend .h2;
+  font-weight: bold;
+}
+
+.h3Bold {
+  font-size: $h3-size;
+  line-height: 120%;
+  font-weight: bold;
+}
+
+.h4Medium14 {
+  font-size: $h4-size;
+  line-height: 140%;
+  font-weight: map-get($fontWeights, medium);
+}
+
+.h4Semibold14 {
+  font-size: $h4-size;
+  line-height: 130%;
+  font-weight: map-get($fontWeights, semiBold);
+}
+
+.h5Medium {
+  font-size: $h5-size;
+  line-height: 130%;
+  font-weight: map-get($fontWeights, medium);
+}

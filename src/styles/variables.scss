@@ -1,0 +1,45 @@
+//colors variables
+
+$grayColors: (
+  10: #f1f1f1,
+  30: #afafaf,
+  50: #6d6d6d,
+  100: #3a3a3a,
+);
+
+$primaryColors: (
+  10: #1400f5,
+  50: #8491ff,
+  100: #dfe2ff,
+);
+
+$typeColors: (
+  white: #fcfcfc,
+  black: #1a1a1a,
+  yellow: #ffee00,
+);
+
+$semanticColors: (
+  green: #00ce90,
+);
+
+// font variables
+
+$fontWeights: (
+  medium: 500,
+  semiBold: 600,
+  thin: 100,
+  extraLight: 200,
+  light: 300,
+  normal: 400,
+  extraBold: 800,
+  black: 900,
+  extraBlack: 950,
+);
+
+//mixin function
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
