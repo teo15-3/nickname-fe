@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import type { AxiosRequestConfig } from "axios";
 import axios from "../lib/api/index";
 
-const useAxios = (configParams: AxiosRequestConfig) => {
+const useAPI = (configParams: AxiosRequestConfig) => {
   const [data, setData] = useState<any>();
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>("");
@@ -24,4 +24,4 @@ const useAxios = (configParams: AxiosRequestConfig) => {
   return [data, error, isLoading];
 };
 
-export default useAxios;
+export default useAPI;
