@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "./page.module.scss";
 
-import useAxios from "../hooks/useAPI";
+import useAPI from "../hooks/useAPI";
 
 export default function Home() {
   const userCountConfig = { method: "get", url: "/usercount" };
-  const [data, isLoading] = useAxios(userCountConfig);
+  const [data, isLoading] = useAPI(userCountConfig);
 
   return (
     <main className={styles.main}>
