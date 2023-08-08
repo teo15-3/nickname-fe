@@ -1,0 +1,16 @@
+@import "../../../../styles/abstracts.scss";
+
+.chip {
+  padding: 8px 16px;
+  background-color: map-get($grayColors, 10);
+  border-radius: 16px;
+
+  cursor: pointer;
+
+  @extend .h5Medium;
+}
+
+.select {
+  color: map-get($typeColors, white);
+  background-color: map-get($primaryColors, 100);
+}
