@@ -1,0 +1,18 @@
+@import "../../../styles/abstracts.scss";
+.title {
+  @extend .h1Bold;
+}
+
+.guide {
+  @extend .h4Medium14;
+  color: map-get($grayColors, 50);
+  margin-top: 8px;
+}
+
+.mainSection {
+  margin-top: 56px;
+}
+
+.tagsSection {
+  margin-bottom: 321px;
+}
