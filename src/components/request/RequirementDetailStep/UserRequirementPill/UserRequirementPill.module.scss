@@ -1,0 +1,22 @@
+@import "../../../../styles/abstracts.scss";
+
+.list {
+  list-style: none;
+  display: flex;
+}
+
+.pill {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background-color: map-get($grayColors, 10);
+
+  color: map-get($grayColors, 100);
+  @extend .h4Semibold14;
+}
+
+.delete16 {
+  margin-left: 4px;
+  cursor: pointer;
+}
