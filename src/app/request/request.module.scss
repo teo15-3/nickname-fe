@@ -1,0 +1,13 @@
+@import "../../styles/abstracts.scss";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.7/dist/web/static/pretendard.css");
+
+.requestPage {
+  box-sizing: border-box;
+  font-family: "Pretendard";
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  height: 100%;
+  max-width: 375px;
+  padding: 0 20px;
+}
