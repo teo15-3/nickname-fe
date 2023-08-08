@@ -1,0 +1,23 @@
+@import "../../../styles/abstracts.scss";
+
+.btn {
+  font-family: inherit;
+  width: 335px;
+  box-sizing: border-box;
+  padding: 16px 0px;
+  border: none;
+  border-radius: 32px;
+  @extend .h2Bold;
+  color: #ffffff;
+  //   margin-bottom: 56px;
+  line-height: 21px;
+}
+
+.nonVisible {
+  background-color: #8b8b8b;
+}
+
+.visible {
+  background-color: map-get($primaryColors, 100);
+  cursor: pointer;
+}
