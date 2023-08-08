@@ -1,0 +1,22 @@
+@import "../../../../styles/abstracts.scss";
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  //   margin-top: 66px;
+  margin-bottom: 16px;
+}
+.adjacencyItem {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+
+  background-color: #cfcfcf;
+  &:nth-last-child(1) {
+    display: none;
+  }
+}
+
+.isCompletedAndNotSelfStep {
+  background-color: map-get($primaryColors, 50);
+}
