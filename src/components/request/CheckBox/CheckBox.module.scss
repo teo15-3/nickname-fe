@@ -1,0 +1,16 @@
+@import "../../../styles/abstracts.scss";
+
+.checkBox {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  @extend .h4Semibold14;
+
+  img {
+    cursor: pointer;
+  }
+  input {
+    display: none;
+  }
+}
