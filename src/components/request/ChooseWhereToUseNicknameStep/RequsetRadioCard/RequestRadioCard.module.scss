@@ -1,0 +1,53 @@
+@import "../../../../styles/abstracts.scss";
+
+.wrapper {
+  box-sizing: border-box;
+  width: 163px;
+  height: 168px;
+  background-color: map-get($grayColors, 10);
+  border-radius: 16px;
+  padding: 22px 20px 20px 24px;
+  border: 2px solid transparent;
+}
+
+.title {
+  @extend .h3Bold;
+  color: #3a3a3a;
+}
+
+.description {
+  @extend .h5Medium;
+  margin-top: 2px;
+  color: #afafaf;
+}
+
+.card {
+  cursor: pointer;
+  display: flex;
+  width: 119px;
+  height: 126px;
+  flex-direction: column;
+  input {
+    display: none;
+  }
+}
+
+.cardTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkBox {
+  width: 24px;
+  height: 24px;
+}
+
+.cardBottom {
+  margin-left: auto;
+  margin-top: auto;
+}
+
+.checked {
+  border: 2px solid map-get($primaryColors, 100);
+}

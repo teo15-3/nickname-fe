@@ -1,0 +1,6 @@
+.wrapper {
+  display: grid;
+  max-width: 334px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 9px;
+}

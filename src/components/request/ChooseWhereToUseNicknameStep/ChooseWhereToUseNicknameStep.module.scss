@@ -1,0 +1,15 @@
+@import "../../../styles/abstracts.scss";
+
+.radioSection {
+  margin-top: 112px;
+  margin-bottom: 106px;
+}
+
+.mainSection {
+  @include center();
+  flex-direction: column;
+}
+
+.title {
+  @extend .h1Bold;
+}
