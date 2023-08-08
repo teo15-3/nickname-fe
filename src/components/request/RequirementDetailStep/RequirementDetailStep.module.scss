@@ -1,0 +1,124 @@
+@import "../../../styles/abstracts.scss";
+.title {
+  @extend .h1Bold;
+}
+
+.guide {
+  @extend .h4Medium14;
+  color: map-get($grayColors, 50);
+}
+
+.guideSection {
+  margin-top: 8px;
+}
+
+.mainSection {
+  margin-top: 56px;
+}
+
+.requirementsSection {
+  margin-top: 88px;
+}
+
+.inputGuide {
+  @extend .h5Medium;
+  color: map-get($semanticColors, green);
+  margin-bottom: 4px;
+}
+
+.inputSection {
+  position: relative;
+}
+
+.requirementsInput {
+  box-sizing: border-box;
+
+  background-color: map-get($grayColors, 10);
+
+  border-radius: 10px;
+  padding: 19px 104px 18px 18px;
+  width: 100%;
+  height: 56px;
+  font-family: inherit;
+  @extend .h3Bold;
+  color: map-get($typeColors, black);
+  outline: none;
+  border: 2px solid transparent;
+
+  &::placeholder {
+    font-family: inherit;
+    color: map-get($grayColors, 30);
+  }
+
+  &:focus {
+    border: 2px solid map-get($primaryColors, 100);
+  }
+
+  &:valid ~ .requirementsButton {
+    color: map-get($primaryColors, 100);
+  }
+  &:valid ~ .requirementsButton::before {
+    background-color: map-get($primaryColors, 30);
+  }
+}
+
+.requirementsButton {
+  position: absolute;
+  border: none;
+  background: none;
+  font-family: inherit;
+  cursor: pointer;
+  padding: 8.5px 14.5px;
+
+  @extend .h3Bold;
+  color: map-get($grayColors, 50);
+  top: 50%;
+  right: 3px;
+  transform: translate(0, -50%);
+
+  &::before {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    right: 64px;
+
+    content: "";
+    width: 2px;
+    height: 32px;
+    background-color: map-get($grayColors, 20);
+    border-radius: 10px;
+  }
+}
+
+.delete24 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 76px;
+}
+
+.requirementsUl {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+
+  //   gap 임시값
+  gap: 8px;
+}
+
+.isPublicSection {
+  // mt -임시값
+  margin-top: 45px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.decribeIsPublic {
+  margin-top: 7.8px;
+  margin-bottom: 32px;
+  @extend .h5Medium;
+  color: map-get($grayColors, 50);
+}
