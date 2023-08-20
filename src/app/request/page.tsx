@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import ChooseNicknameTagStep from "@/components/request/ChooseNicknameTagStep/ChooseNicknameTagStep";
 import RequirementDetailStep from "@/components/request/RequirementDetailStep/RequirementDetailStep";
 import axios from "@/lib/api/index";
+import Bottomsheet from "@/components/request/Bottomsheet/Bottomsheet";
 
 export interface ProcessStatusI {
   step: number;
@@ -53,6 +54,8 @@ const page = () => {
 
   const [nowStepNumber, setNowStepNumber] = useState(1);
 
+  const [postId, setPostId] = useState("");
+
   const handleNext = () => {
     changeNextStep();
   };
@@ -84,7 +87,16 @@ const page = () => {
         data: JSON.stringify(userRequsetForm),
       };
 
-      axios.request(requestConfig).then(console.log);
+      (async () => {
+        try {
+          const result = await axios.request(requestConfig);
+          console.log(result);
+          const data = await result.data;
+          setPostId(data);
+        } catch (error) {
+          console.error(error);
+        }
+      })();
     }
     console.log(userRequsetForm);
   }, [nowStepNumber, userRequsetForm]);
@@ -116,7 +128,7 @@ const page = () => {
         ></ChooseNicknameTagStep>
       )}
 
-      {nowStepNumber === 3 && (
+      {nowStepNumber >= 3 && (
         <RequirementDetailStep
           onNext={async ({
             postDetail,
@@ -130,6 +142,8 @@ const page = () => {
           }}
         ></RequirementDetailStep>
       )}
+
+      {nowStepNumber === 4 && <Bottomsheet postId={postId}></Bottomsheet>}
 
       {/* Step  4 에서 데이터 전송 , 다음 페이지 혹은 성공 UI  */}
     </main>
