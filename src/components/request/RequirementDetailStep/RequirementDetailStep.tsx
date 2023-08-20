@@ -121,7 +121,7 @@ const RequirementDetailStep = ({
           onNext={() =>
             onNext({ postDetail: userRequirements, postPublic: isPublic })
           }
-          text="다음"
+          text="요청완료"
         ></Btn>
       </div>
     </section>
