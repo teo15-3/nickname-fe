@@ -1,5 +1,6 @@
 "use client";
 
+import "../styles/globals.css";
 import "../styles/globals.scss";
 import "../styles/reset.scss";
 
