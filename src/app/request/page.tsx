@@ -1,13 +1,16 @@
 "use client";
 
-import ProgressBar from "@/components/request/Progress/ProgressBar/ProgressBar";
-import style from "./request.module.scss";
-import ChooseWhereToUseNicknameStep from "@/components/request/ChooseWhereToUseNicknameStep/ChooseWhereToUseNicknameStep";
 import { useEffect, useState } from "react";
+
+import Bottomsheet from "@/components/request/Bottomsheet/Bottomsheet";
+import ProgressBar from "@/components/request/Progress/ProgressBar/ProgressBar";
+import ChooseWhereToUseNicknameStep from "@/components/request/ChooseWhereToUseNicknameStep/ChooseWhereToUseNicknameStep";
 import ChooseNicknameTagStep from "@/components/request/ChooseNicknameTagStep/ChooseNicknameTagStep";
 import RequirementDetailStep from "@/components/request/RequirementDetailStep/RequirementDetailStep";
+
 import axios from "@/lib/api/index";
-import Bottomsheet from "@/components/request/Bottomsheet/Bottomsheet";
+
+import style from "./request.module.scss";
 
 export interface ProcessStatusI {
   step: number;
@@ -43,7 +46,7 @@ const USER_REQUEST_FORM_INITAIL_STATE: RequestUserValuesI = {
   postPublic: false,
 };
 
-const page = () => {
+const Page = () => {
   const [userRequsetForm, setUserRequsetForm] = useState<RequestUserValuesI>(
     USER_REQUEST_FORM_INITAIL_STATE,
   );
@@ -56,24 +59,23 @@ const page = () => {
 
   const [postId, setPostId] = useState("");
 
-  const handleNext = () => {
-    changeNextStep();
-  };
-
   const changeNextStep = () => {
     if (nowStepNumber !== 4) {
       setAllStepStatus((prev) =>
         prev.map((status) => {
           if (status.step === nowStepNumber) {
             return { ...status, isDone: true };
-          } else {
-            return status;
           }
+          return status;
         }),
       );
 
       setNowStepNumber((prev) => prev + 1);
     }
+  };
+
+  const handleNext = () => {
+    changeNextStep();
   };
 
   useEffect(() => {
@@ -90,7 +92,6 @@ const page = () => {
       (async () => {
         try {
           const result = await axios.request(requestConfig);
-          console.log(result);
           const data = await result.data;
           setPostId(data);
         } catch (error) {
@@ -98,16 +99,12 @@ const page = () => {
         }
       })();
     }
-    console.log(userRequsetForm);
   }, [nowStepNumber, userRequsetForm]);
 
   return (
     <main className={style.requestPage}>
       <section className={style.top}>
-        <ProgressBar
-          nowStep={nowStepNumber}
-          processes={allStepStatus}
-        ></ProgressBar>
+        <ProgressBar nowStep={nowStepNumber} processes={allStepStatus} />
       </section>
 
       {nowStepNumber === 1 && (
@@ -116,7 +113,7 @@ const page = () => {
             handleNext();
             setUserRequsetForm((prev) => ({ ...prev, postWhere: where }));
           }}
-        ></ChooseWhereToUseNicknameStep>
+        />
       )}
 
       {nowStepNumber === 2 && (
@@ -125,7 +122,7 @@ const page = () => {
             handleNext();
             setUserRequsetForm((prev) => ({ ...prev, postTags: tags }));
           }}
-        ></ChooseNicknameTagStep>
+        />
       )}
 
       {nowStepNumber >= 3 && (
@@ -140,14 +137,14 @@ const page = () => {
             handleNext();
             setUserRequsetForm((prev) => ({ ...prev, postDetail, postPublic }));
           }}
-        ></RequirementDetailStep>
+        />
       )}
 
-      {nowStepNumber === 4 && <Bottomsheet postId={postId}></Bottomsheet>}
+      {nowStepNumber === 4 && <Bottomsheet postId={postId} />}
 
       {/* Step  4 에서 데이터 전송 , 다음 페이지 혹은 성공 UI  */}
     </main>
   );
 };
 
-export default page;
+export default Page;
